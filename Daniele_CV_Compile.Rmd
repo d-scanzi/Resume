@@ -1,0 +1,132 @@
+---
+name: Daniele
+surname: Scanzi
+profilepic: "./img/me.png"
+email: "dsca347@auckland.ac.nz"
+mobile: '2102457339'
+github: d-scanzi
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 990000
+aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain and fool people. '
+docname: CV
+output: vitae::awesomecv
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+             ,'tidyverse' )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here('data.R'))
+
+```
+
+# Education
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = degree,
+    what = inst,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Research Positions
+
+```{r EMPLOYMENT}
+
+research_pos %>%
+  detailed_entries(
+    with  = role,
+    what  = inst,
+    why   = detail,
+    when  = glue::glue("{startYear} - {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Work Experience
+
+```{r WORK}
+work %>% 
+  detailed_entries(
+    with  = role, 
+    what  = company,
+    why   = detail,
+    when  = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+```
+
+\pagebreak 
+
+# Conferences
+
+```{r CONFERENCES}
+conferences %>% 
+  detailed_entries(
+    with = title,
+    what = where,
+    why  = detail,
+    when = glue::glue('{day} {month} {year}', .na = '')
+  )
+```
+
+# Skills
+
+```{r}
+skills %>% 
+  detailed_entries(
+    with = area, 
+    what = skill
+  )
+```
+
+
+# Certificates
+
+```{r}
+certifications %>% 
+  detailed_entries(
+    what = name,
+    why  = area,
+    when = yearStart
+  )
+```
+
+# Languages
+
+```{r}
+languages %>% 
+  detailed_entries(
+    what = language,
+    when = level
+  )
+```
+
+
+
+\vspace*{\fill}
+\small
+\centerline{This CV was created using R code and markdown. Code available \href{https://github.com/d-scanzi/Resume}{\color{lightgray}{here}}}
+
+
