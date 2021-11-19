@@ -7,7 +7,7 @@ mobile: '2102457339'
 github: d-scanzi
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 990000
-aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain and fool people. '
+aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain people. '
 docname: CV
 output: vitae::awesomecv
 always_allow_html: yes
