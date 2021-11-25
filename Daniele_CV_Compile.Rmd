@@ -7,7 +7,7 @@ mobile: '2102457339'
 github: d-scanzi
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 990000
-aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain people. '
+aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain people.'
 docname: CV
 output: vitae::awesomecv
 always_allow_html: yes
@@ -64,6 +64,17 @@ research_pos %>%
 
 ```
 
+# Prizes and Scholarships
+
+```{r}
+prizes %>% 
+  detailed_entries(
+    what = name, 
+    when = year
+  )
+```
+
+
 # Work Experience
 
 ```{r WORK}
@@ -77,7 +88,6 @@ work %>%
   )
 ```
 
-\pagebreak 
 
 # Conferences
 
@@ -123,7 +133,16 @@ languages %>%
   )
 ```
 
+# More Information
 
+For more information and ***supporting evidence*** you could contact: 
+
+[]
+[]
+
+If the selected classes are filled, I would be interested in being considered for PSYCH306. 
+
+Please, contact me via email for further information about my academic career or to discuss other alternatives. 
 
 \vspace*{\fill}
 \small
