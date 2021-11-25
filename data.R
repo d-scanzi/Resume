@@ -27,7 +27,7 @@ edu <- tribble(
   ~degree, ~startMonth, ~startYear, ~endMonth, ~endYear, ~inst, ~where, ~detail,
   "Bachelor of Science (Honours) - Psychology", 'February', 2021, 'October', 2021, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", 'Specialization in cognitive neuroscience',
   "Bachelor of Science (Honours) - Psychology", 'February', 2021, 'October', 2021,  "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", 'Independently analyzed EEG data with a focus on nonparametric statistical tools',
-  "Bachelor of Science (Honours) - Psychology", 'February', 2021, 'October', 2021,  "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", 'This year I have been invited to talk about magic and the mind in Science Scholars, Stage II (SCISCHOL 200)',
+  "Bachelor of Science (Honours) - Psychology", 'February', 2021, 'October', 2021,  "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", 'Invited to talk about magic and the mind in Science Scholars, Stage II (SCISCHOL 200)',
   'Bachelor of Science - Psychology and Communication', NA, 2015, NA, 2018, 'The University of Milan - Bicocca', 'Milan (IT)', 'Developed, programmed and ran an eye-tracking study to test online processing of presuppositions',
   'Bachelor of Science - Psychology and Communication', NA, 2015, NA, 2018, 'The University of Milan - Bicocca', 'Milan (IT)', 'Graduated with A+ range with excellence',
 )
@@ -64,4 +64,11 @@ languages <- tribble(
   ~language, ~level,
   'English', 'Fluent',
   'Italian', 'Native'
+)
+
+# Prizes and Scholarships
+prizes <- tribble(
+  ~name, ~year,
+  'PSYCH727 - Functional MRI First in Course Award', 2021,
+  'University of Auckland Postgraduate Honours/PG Diploma Scholarship', 2021
 )
