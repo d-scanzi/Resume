@@ -12,6 +12,16 @@ work <- tribble(
  'Sale Assistant', 'Youbrico', NA, 2014, NA, 2018, 'Bergamo (IT)', 'Supportive and trusting relationships with colleagues and management'
  )
 
+# Teaching
+teaching_pos <- tribble(
+  ~paper, ~inst ,~where, ~startYear, ~endYear ,~detail,
+  'Biopsychology(PSYCH202)', "The University of Auckland - Waipapa Taumata Rau", 'Auckland (NZ)', 2022, NA, 'Teaching four streams of weekly tutorials',
+  'Biopsychology(PSYCH202)', "The University of Auckland - Waipapa Taumata Rau", 'Auckland (NZ)', 2022, NA, 'Grading assignments',
+  'Biopsychology(PSYCH202)', "The University of Auckland - Waipapa Taumata Rau", 'Auckland (NZ)', 2022, NA, 'Weekly meeting with the tutoring team to discuss the material and the most effective and engaging way to present it',
+  'Experimental Design and Quantitative Methods for Psychology(PSYCH747)', "The University of Auckland - Waipapa Taumata Rau", 'Auckland (NZ)', 2022, NA, 'Grading the mid-semester assignment',
+  'Experimental Design and Quantitative Methods for Psychology(PSYCH747)', "The University of Auckland - Waipapa Taumata Rau", 'Auckland (NZ)', 2022, NA, 'Covering a portion of office hours'
+)
+
 # Research Positions
 research_pos <- tribble(
   ~role, ~inst, ~startYear, ~endYear, ~where, ~detail,
@@ -37,6 +47,16 @@ conferences <- tribble(
   ~title, ~day, ~month, ~year, ~where, ~detail,
   'ProsLang', 30, 'November', 2018, 'Wellington (NZ)', 'Poster presentation of the research conducted for my bachelor thesis',
   'XPRAG', 1, 'June', 2018, 'Pavia (IT)', 'Oral presentation of the research conducted for my bachelor thesis',
+)
+
+# Leaderships role
+leadership <- tribble(
+  ~title, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "Seminars Organization", 2022, NA, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", "Organization of the CogNeuro series of seminars for the School of Psychology",
+  "Seminars Organization", 2022, NA, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", "Coordinating with the second organizer for the logistic, schedule and goal-setting for the year",
+  "Office Manager", 2021, NA, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", "Organization and coordination of the weekly meeting of Paul Corballis's lab",
+  "Office Manager", 2021, NA, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", "Definition of the agenda for the weekly meetings",
+  "Office Manager", 2021, NA, "The University of Auckland - Waipapa Taumata Rau", "Auckland (NZ)", "Setting up and maintaining an efficient file storing and sharing system to be used within the laboratory"
 )
 
 # Certificates
@@ -66,9 +86,20 @@ languages <- tribble(
   'Italian', 'Native'
 )
 
-# Prizes and Scholarships
+# Prizes won
 prizes <- tribble(
   ~name, ~year,
   'PSYCH727 - Functional MRI First in Course Award', 2021,
   'University of Auckland Postgraduate Honours/PG Diploma Scholarship', 2021
 )
+
+# What am I currently involved?
+currently <- tribble(
+  ~name, ~year,
+  'Leading a methodological and technical study on the effects of preprocessing on EEG data', 2021,
+  'Member of the UOA PSYCH reading group', 2021
+)
+
+
+
+

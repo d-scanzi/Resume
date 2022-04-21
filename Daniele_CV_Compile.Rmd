@@ -6,7 +6,7 @@ email: "dsca347@auckland.ac.nz"
 mobile: '2102457339'
 github: d-scanzi
 date: "`r format(Sys.time(), '%B %Y')`"
-headcolor: 990000
+headcolor: 1f618d 
 aboutme: 'I am a prospective PhD student of cognitive neuroscience interested in consciousness, awareness and attention. I love to learn, talk and communicate about everything scientific. In my free time I am a magician, and I apply psychology and communication to entertain people.'
 docname: CV
 output: vitae::awesomecv
@@ -14,7 +14,7 @@ always_allow_html: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo    = FALSE,
                       warning = FALSE,
                       message = FALSE)
 
@@ -49,7 +49,7 @@ edu %>%
 
 ```
 
-# Research Positions
+# Research Positions & Projects
 
 ```{r EMPLOYMENT}
 
@@ -64,7 +64,31 @@ research_pos %>%
 
 ```
 
-# Prizes and Scholarships
+# Teaching Positions
+```{r}
+teaching_pos %>% 
+  detailed_entries(
+    with  = paper,
+    what  = inst,
+    why   = detail,
+    when  = glue::glue("{startYear} - {endYear}",.na = "currently"),
+    where = where
+)
+```
+
+# Leadership and Coordination
+```{r}
+leadership %>% 
+  detailed_entries(
+    with  = title,
+    what  = inst,
+    why   = detail,
+    when  = startYear,
+    where = where
+  )
+```
+
+# Prizes and scholarships
 
 ```{r}
 prizes %>% 
@@ -73,21 +97,6 @@ prizes %>%
     when = year
   )
 ```
-
-
-# Work Experience
-
-```{r WORK}
-work %>% 
-  detailed_entries(
-    with  = role, 
-    what  = company,
-    why   = detail,
-    when  = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
-    where = where
-  )
-```
-
 
 # Conferences
 
@@ -110,7 +119,18 @@ skills %>%
     what = skill
   )
 ```
+# Other work experience
 
+```{r WORK}
+work %>% 
+  detailed_entries(
+    with  = role, 
+    what  = company,
+    why   = detail,
+    when  = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+```
 
 # Certificates
 
@@ -122,6 +142,7 @@ certifications %>%
     when = yearStart
   )
 ```
+\newpage
 
 # Languages
 
@@ -133,16 +154,14 @@ languages %>%
   )
 ```
 
-# More Information
+# Currently 
+```{r}
+currently %>% 
+  detailed_entries(
+    what = name
+  )
+```
 
-For more information and ***supporting evidence*** you could contact: 
-
-[]
-[]
-
-If the selected classes are filled, I would be interested in being considered for PSYCH306. 
-
-Please, contact me via email for further information about my academic career or to discuss other alternatives. 
 
 \vspace*{\fill}
 \small
